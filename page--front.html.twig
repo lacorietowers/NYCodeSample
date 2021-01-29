@@ -1,0 +1,68 @@
+{% include '@public/includes/header.html.twig' %} 
+<!-- Adds commissioner images-->
+<div class="container-fluid main">
+    {% if page.commissioner %}
+        <div class="row commissionerBlock">	
+            {{page.commissioner}}
+        </div>
+    {% endif %}
+  <!-- creates resources blocks-->  
+    <div class="row resources">
+        <div class="resourceSection">
+            {% if page.tab1 %}
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                     <div class="resourceTab">
+                        {{ page.tab1}}
+                    </div>
+                </div>
+            {% endif %}
+            
+            {% if page.tab2 %}
+                 <div class="col-xs-12 col-md-6 col-lg-3">
+                     <div class="resourceTab">
+                        {{ page.tab2}}
+                    </div>
+                </div>
+            {% endif %}
+            
+            {% if page.tab3 %}
+                 <div class="col-xs-12 col-md-6 col-lg-3">
+                     <div class="resourceTab">
+                        {{ page.tab3}}
+                    </div>
+                </div>
+            {% endif %}
+            
+            {% if page.tab4 %}
+                 <div class="col-xs-12 col-md-6 col-lg-3">
+                     <div class="resourceTab">
+                        {{ page.tab4}}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+ </div>
+<!-- Adds utilities -->
+{% if page.utilities %}
+    	<div class="row utilities">
+		  {{page.utilities}}
+	</div>
+{% endif %}
+<!-- Adds links-->
+{% if page.links %}
+    <div class="row links">
+	  {{page.links}}
+    </div>
+{% endif %}
+
+{% if page.prefooter %}
+<div class="container-fluid prefooter">
+	<div class="container">
+			<div class="col-xs-12">
+				{{ page.prefooter }}
+			</div>
+	</div>
+</div>
+{% endif %}
+{% include '@public/includes/footer.html.twig' %} 
